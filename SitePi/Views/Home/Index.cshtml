@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+
+<div class="container">
+    <div class="py-3">
+        <h3>@ViewData["Title"]</h3>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-6">
+                    <span class="text-muted">Users</span>
+                </div>
+                <div class="col-6">
+                    <div class="text-right">
+                        <a asp-area="" asp-controller="User" asp-action="New">
+                            <i class="fas fa-plus-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-borderless table-hover">
+            <thead class="border-bottom">
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (User u in ViewBag.Users)
+                {
+                    <tr>
+                        <td>@u.Id</td>
+                        <td>@u.Name</td>
+                        <td>@u.Email</td>
+                        <th>
+                            <a class="text-decoration-none pr-2" asp-area="" asp-controller="User" asp-action="Edit" asp-route-id="@u.Id">
+                                <i class="fas fa-pen"></i>
+                            </a>
+                            <a class="text-decoration-none pr-2" asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@u.Id">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                            <a class="text-decoration-none pr-2" asp-area="" asp-controller="User" asp-action="Delete" asp-route-id="@u.Id">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-6">
+                    <span class="text-muted">Bots</span>
+                </div>
+                <div class="col-6">
+                    <div class="text-right">
+                        <a asp-area="" asp-controller="Quiz" asp-action="Index">
+                            <i class="fas fa-plus-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-borderless table-hover">
+            <thead class="border-bottom">
+                <tr>
+                    <th>Nome</th>
+                    <th>Criatividade</th>
+                    <th>Liderança</th>
+                    <th>Individualista</th>
+                    <th>Insegurança</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Bot b in ViewBag.Bots)
+                {
+                    <tr>
+                        <td>@b.Name</td>
+                        <td>@b.PercentageA %</td>
+                        <td>@b.PercentageB %</td>
+                        <td>@b.PercentageC %</td>
+                        <td>@b.PercentageD %</td>
+                        <th>
+                            <a class="text-decoration-none pr-2" asp-area="" asp-controller="Home" asp-action="BaixarBot" asp-route-id="@b.Id">
+                                <i class="fas fa-download"></i>
+                            </a>
+                            <a class="text-decoration-none pr-2" asp-area="" asp-controller="Home" asp-action="DeleteBot" asp-route-id="@b.Id">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

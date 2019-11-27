@@ -1,0 +1,187 @@
+﻿
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 576px) {
+    /* Mobile - col-sm */
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Tablet - col-md */
+    .container {
+        max-width: 980px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Laptop - col-lg */
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Desktop - col-xl */
+    .container {
+        max-width: 1350px;
+    }
+}
+
+.table {
+    margin-bottom: 0 !important;
+}
+
+/* Custom Colors */
+
+.text-blue {
+    color: #007bff !important;
+}
+
+.text-lightblue {
+    color: #0091ea !important;
+}
+
+.text-indigo {
+    color: #6610f2 !important;
+}
+
+.text-purple {
+    color: #6f42c1 !important;
+}
+
+.text-pink {
+    color: #e83e8c !important;
+}
+
+.text-red {
+    color: #dc3545 !important;
+}
+
+.text-orange {
+    color: #fd7e14 !important;
+}
+
+.text-yellow {
+    color: #ffc107 !important;
+}
+
+.text-green {
+    color: #28a745 !important;
+}
+
+.text-teal {
+    color: #20c997 !important;
+}
+
+.text-cyan {
+    color: #17a2b8 !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.text-gray {
+    color: #6c757d !important;
+}
+
+.text-darkgray {
+    color: #343a40 !important;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}

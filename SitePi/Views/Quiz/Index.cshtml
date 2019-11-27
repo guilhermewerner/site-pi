@@ -1,0 +1,187 @@
+﻿
+@{
+    ViewData["Title"] = "Quiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SitePi.Models.Responds
+
+<div class="container">
+    <div class="py-3">
+        <h3>@ViewData["Title"]</h3>
+    </div>
+    <form method="post">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label><b>Usuario:</b></label>
+                    <select class="form-control" asp-for="UserId">
+                        <option></option>
+                        @foreach (User u in ViewBag.Users)
+                        {
+                            <option value="@u.Id">@u.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="card">
+            <div class="card-header">
+                <span class="text-muted">Responda o quiz para gerar um Bot</span>
+            </div>
+            <div class="card-body">
+                @{
+                    int i = 1;
+                }
+                @foreach (Question q in ViewBag.Questions)
+                {
+                    int j = 1;
+                    <h5 style="margin-bottom: 20px;">@i. @q.Text</h5>
+                    <div class="form-group">
+                        @foreach (Choice c in ViewBag.Choices)
+                        {
+                            @if (c.QuestionId == q.Id)
+                            {
+                                @switch (j)
+                                {
+                                    case 1:
+                                        <p>a) @c.Text</p>
+                                        break;
+                                    case 2:
+                                        <p>b) @c.Text</p>
+                                        break;
+                                    case 3:
+                                        <p>c) @c.Text</p>
+                                        break;
+                                    case 4:
+                                        <p>d) @c.Text</p>
+                                        break;
+                                }
+                                j++;
+                            }
+                        }
+                    </div>
+                    switch (i)
+                    {
+                        case 1:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_1">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 2:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_2">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 3:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_3">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 4:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_4">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 5:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_5">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 6:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_6">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 7:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_7">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 8:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_8">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                        case 9:
+                            <div class="form-group">
+                                <label for="@q.Id"><b>Resposta:</b></label>
+                                <select class="form-control" id="@q.Id" asp-for="Profile_9">
+                                    <option></option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                    <option value="d">D</option>
+                                </select>
+                            </div>
+                            break;
+                    }
+                    <hr />
+                    i++;
+                }
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <br />
+</div>
