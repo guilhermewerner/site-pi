@@ -2,3 +2,4 @@
 * text=auto
 
 *.cshtml linguist-language=csharp
+*.js linguist-vendored=true
